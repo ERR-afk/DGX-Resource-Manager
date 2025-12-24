@@ -9,7 +9,7 @@ As a researcher using a shared DGX cluster, I often found GPUs occupied by **rog
 - **Process Detection:** Distinguishes between SLURM jobs, Docker containers, and bare-metal processes.
 - **Hierarchy Check:** Verifies if a process PID actually belongs to the active SLURM job ID.
 - **Automated Cleanup:** Automatically kills processes that are consuming GPU memory but are not scheduled via SLURM.
-- **Logging:** Maintains a detailed audit log (`gpu_kills.log`) of every terminated process.
+- **Logging & Accountability:** Maintains a detailed audit log (`gpu_kills.log`)capturing the **username**, timestamp, and command of every terminated process, helping admins identify repeat offenders.
 
 ## 📋 Prerequisites
 - Python 3.x
